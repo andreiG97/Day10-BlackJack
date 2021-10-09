@@ -33,10 +33,11 @@ def black_jack():
         print(player_card2)
         sum_player = cards[player_card] + cards[player_card2]
         count = 1
+    else:
+        sum_player += cards[player_card]
     computer_card = random.choice(choices)
     sum_computer = cards[computer_card]
-    # change this so it doesn't add twice the sum
-    sum_player += cards[player_card]
+
     return f'Your total is {sum_player} and the dealer has {sum_computer}'
 
 
